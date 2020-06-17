@@ -48,6 +48,7 @@ $('document').ready(function () {
 
                 var pieceElement = $(this.piece);
 		pieceElement.attr('id', id);
+		pieceElement.attr('onclick', "movePiece(" + "'" + id + "'" + ")");
 		console.log(pieceElement);
 
                 pieceElement.css({
@@ -126,7 +127,12 @@ $('document').ready(function () {
 			this.segments[i].drawBlock();
 		}
 	}
-	
+	// stuff for moving the pieces
+	var movePiece = function (id) {
+		console.log("You clicked " + id);	
+	}
+
+
 	setBoard();
 	drawBoard();
 	setPieces();
